@@ -20,9 +20,8 @@ struct FavoritesView: View {
             
             HStack {
                 ForEach(information.hobbies, id: \.self) { hobby in
-                    Image(systemName: hobby)
-                        .resizable()
-                        .frame(maxWidth: 80, maxHeight: 60)
+                    Text(hobby)
+                        .font(.system(size: 30))
                 }
                 .padding()
             }
@@ -34,7 +33,7 @@ struct FavoritesView: View {
             HStack(spacing: 60) {
                 ForEach(information.foods, id: \.self) { food in
                     Text(food)
-                        .font(.system(size:48))
+                        .font(.system(size:30))
                 }
             }
             .padding()
